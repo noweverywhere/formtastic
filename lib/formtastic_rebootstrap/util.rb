@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module Formtastic
+module FormtasticRebootstrap
   # @private
   module Util
     extend self

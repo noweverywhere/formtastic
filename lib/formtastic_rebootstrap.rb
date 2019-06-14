@@ -1,25 +1,31 @@
 # encoding: utf-8
-require 'formtastic/engine' if defined?(::Rails)
+require 'formtastic_rebootstrap/engine' if defined?(::Rails)
+require 'formtastic_rebootstrap/util'
+require "formtastic_rebootstrap/helpers"
+require "formtastic_rebootstrap/inputs"
+require "formtastic_rebootstrap/actions"
+require 'formtastic_rebootstrap/form_builder'
+# require "action_view/helpers/text_field_date_helper"
 
-module Formtastic
+module FormtasticRebootstrap
   extend ActiveSupport::Autoload
 
-  autoload :Helpers
-  autoload :HtmlAttributes
-  autoload :LocalizedString
-  autoload :Localizer
-  autoload :NamespacedClassFinder
-  autoload :InputClassFinder
-  autoload :ActionClassFinder
-  autoload :Deprecation
+  # autoload :Helpers
+  # autoload :HtmlAttributes
+  # autoload :LocalizedString
+  # autoload :Localizer
+  # autoload :NamespacedClassFinder
+  # autoload :InputClassFinder
+  # autoload :ActionClassFinder
+  # autoload :Deprecation
 
-  eager_autoload do
-    autoload :I18n
-    autoload :FormBuilder
-    autoload :Inputs
-    autoload :Actions
-    autoload :Util
-  end
+  # eager_autoload do
+  #   autoload :I18n
+  #   autoload :FormBuilder
+  #   autoload :Inputs
+  #   autoload :Actions
+  #   autoload :Util
+  # end
 
   # @private
   mattr_accessor :deprecation

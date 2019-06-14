@@ -1,5 +1,6 @@
-module Formtastic
+module FormtasticRebootstrap
   class FormBuilder < ActionView::Helpers::FormBuilder
+  # class FormBuilder < Formtastic::Formbuilder
 
     # Defines a new configurable option
     # @param [Symbol] name the configuration name
@@ -21,7 +22,7 @@ module Formtastic
     configure :default_text_area_width
     configure :all_fields_required_by_default, true
     configure :include_blank_for_select_by_default, true
-    configure :required_string, proc { %{<abbr title="#{Formtastic::I18n.t(:required)}">*</abbr>}.html_safe }
+    configure :required_string, proc { %{<abbr title="#{::Formtastic::I18n.t(:required)}">*</abbr>}.html_safe }
     configure :optional_string, ''
     configure :inline_errors, :sentence
     configure :label_str_method, :humanize
@@ -42,10 +43,10 @@ module Formtastic
     configure :perform_browser_validations, false
     # Check {Formtastic::InputClassFinder} to see how are inputs resolved.
     configure :input_namespaces, [::Object, ::Formtastic::Inputs]
-    configure :input_class_finder, Formtastic::InputClassFinder
+    configure :input_class_finder, ::Formtastic::InputClassFinder
     # Check {Formtastic::ActionClassFinder} to see how are inputs resolved.
     configure :action_namespaces, [::Object, ::Formtastic::Actions]
-    configure :action_class_finder, Formtastic::ActionClassFinder
+    configure :action_class_finder, ::Formtastic::ActionClassFinder
 
     configure :skipped_columns, [:created_at, :updated_at, :created_on, :updated_on, :lock_version, :version]
     configure :priority_time_zones, []
@@ -54,13 +55,13 @@ module Formtastic
 
     attr_reader :auto_index
 
-    include Formtastic::HtmlAttributes
+    include ::Formtastic::HtmlAttributes
 
-    include Formtastic::Helpers::InputHelper
-    include Formtastic::Helpers::InputsHelper
-    include Formtastic::Helpers::ActionHelper
-    include Formtastic::Helpers::ActionsHelper
-    include Formtastic::Helpers::ErrorsHelper
+    include ::Formtastic::Helpers::InputHelper
+    include ::Formtastic::Helpers::InputsHelper
+    include ::Formtastic::Helpers::ActionHelper
+    include ::Formtastic::Helpers::ActionsHelper
+    include ::Formtastic::Helpers::ErrorsHelper
 
     # This is a wrapper around Rails' `ActionView::Helpers::FormBuilder#fields_for`, originally
     # provided to ensure that the `:builder` from `semantic_form_for` was passed down into
