@@ -1,16 +1,15 @@
 # encoding: utf-8
 $:.push File.expand_path("../lib", __FILE__)
-require "formtastic/version"
 
 Gem::Specification.new do |s|
-  s.name        = %q{formtastic}
-  s.version     = Formtastic::VERSION
+  s.name        = %q{formtastic_rebootstrap}
+  s.version     = '0.0.1'
   s.platform    = Gem::Platform::RUBY
-  s.authors     = [%q{Justin French}]
-  s.email       = [%q{justin@indent.com.au}]
-  s.homepage    = %q{http://github.com/justinfrench/formtastic}
-  s.summary     = %q{A Rails form builder plugin/gem with semantically rich and accessible markup}
-  s.description = %q{A Rails form builder plugin/gem with semantically rich and accessible markup}
+  s.authors     = [%q{Marinus Swanepoel}]
+  s.email       = [%q{marinus@noweverywhere.ca}]
+  s.homepage    = %q{http://github.com/noweverywhere/formtastic_rebootstrap}
+  s.summary     = %q{Extends the formtastic gem to include bootstrap classes for easy styling and layout control}
+  s.description = %q{Extends the formtastic gem to include bootstrap classes for easy styling and layout control}
   s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
@@ -23,9 +22,10 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.1.0'
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.rubygems_version = %q{1.3.6}
+  s.rubygems_version = %q{0.0.1}
 
-  s.add_dependency(%q<actionpack>, [">= 4.1.0"])
+  s.add_dependency(%q<formtastic>, [">= 3.1.5"])
+  s.add_dependency(%q<bootstrap>, [">= 4.0.0"])
 
   s.add_development_dependency(%q<nokogiri>)
   s.add_development_dependency(%q<rspec-rails>, ["~> 3.4"])

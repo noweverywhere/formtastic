@@ -26,11 +26,18 @@ module Formtastic
     #   </form>
     #
     # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
-    class StringInput 
+    class StringInput
       include Base
       include Base::Stringish
       include Base::Placeholder
-      
+
+      def label_html
+        ''
+      end
+
+      def input_html
+        ''
+      end
     end
   end
 end
