@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
 
     # Outputs a simple `<label>` with a HTML5 `<input type="number">` wrapped in the standard
@@ -65,7 +65,7 @@ module Formtastic
     #  <%= f.input :shoe_size, :as => :number, :in => 3..15, :step => 1 %>
     #  <%= f.input :shoe_size, :as => :number, :input_html => { :in => 3..15, :step => 1 } %>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
     # @see http://api.rubyonrails.org/classes/ActiveModel/Validations/HelperMethods.html#method-i-validates_numericality_of Rails' Numericality validation documentation
     class NumberInput 
       include Base

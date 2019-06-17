@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
 
     # Outputs a `<label>` with a `<select>` containing a series of time zones (using Rails' own
@@ -26,7 +26,7 @@ module Formtastic
     #     </fieldset>
     #   </form>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
     #
     # The priority_zones option:
     #   Since this input actually uses Rails' `time_zone_select` helper, the :priority_zones
@@ -35,7 +35,7 @@ module Formtastic
     #   And you can configure default value using
     #
     #   ```
-    #     Formtastic::FormBuilder.priority_time_zones = [timezone1, timezone2]
+    #     FormtasticRebootstrap::FormBuilder.priority_time_zones = [timezone1, timezone2]
     #   ```
     #
     #   See http://apidock.com/rails/ActionView/Helpers/FormOptionsHelper/time_zone_select for more information.
@@ -51,7 +51,7 @@ module Formtastic
       end
 
       def priority_zones
-        options[:priority_zones] || Formtastic::FormBuilder.priority_time_zones
+        options[:priority_zones] || FormtasticRebootstrap::FormBuilder.priority_time_zones
       end
     end
   end

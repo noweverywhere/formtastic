@@ -1,4 +1,4 @@
-module FormtasticRebootstrap
+module FormtasticRebootstrapRebootstrap
   module Inputs
 
     # Outputs a simple `<label>` with a `<input type="text">` wrapped in the standard
@@ -25,7 +25,7 @@ module FormtasticRebootstrap
     #     </fieldset>
     #   </form>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
     class StringInput
       include Base
       include Base::Stringish

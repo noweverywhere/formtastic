@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     # Outputs a label and a text field, along with a datalist tag
     # datalist tag provides a list of options which drives a simple autocomplete

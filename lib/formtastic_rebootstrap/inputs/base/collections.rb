@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     module Base
       module Collections
@@ -126,8 +126,8 @@ module Formtastic
         end
 
         def collection_for_boolean
-          true_text = options[:true] || Formtastic::I18n.t(:yes)
-          false_text = options[:false] || Formtastic::I18n.t(:no)
+          true_text = options[:true] || FormtasticRebootstrap::I18n.t(:yes)
+          false_text = options[:false] || FormtasticRebootstrap::I18n.t(:no)
 
           # TODO options[:value_as_class] = true unless options.key?(:value_as_class)
 

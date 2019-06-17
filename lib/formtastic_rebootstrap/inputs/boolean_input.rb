@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     # Boolean inputs are used to render an input for a single checkbox, typically for attributes
     # with a simple yes/no or true/false value. Boolean inputs are used by default for boolean
@@ -28,7 +28,7 @@ module Formtastic
     # @example Set the values for the checked and unchecked states
     #   <%= f.input :published, :checked_value => "yes", :unchecked_value => "no" %>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
     class BooleanInput
       include Base
 

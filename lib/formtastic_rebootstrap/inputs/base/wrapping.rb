@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     module Base
       # @todo relies on `dom_id`, `required?`, `optional`, `errors?`, `association_primary_key` & `sanitized_method_name` methods from another module

@@ -1,9 +1,9 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     module Base
       module Labelling
         
-        include Formtastic::LocalizedString
+        include FormtasticRebootstrap::LocalizedString
         
         def label_html
           render_label? ? builder.label(input_name, label_text, label_html_options) : "".html_safe

@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
 
     # Outputs a simple `<label>` with a HTML5 `<input type="email">` wrapped in the standard
@@ -24,7 +24,7 @@ module Formtastic
     #     </fieldset>
     #   </form>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
     class EmailInput 
       include Base
       include Base::Stringish

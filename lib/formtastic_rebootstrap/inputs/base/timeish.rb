@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     module Base
       # Timeish inputs (`:date_select`, `:datetime_select`, `:time_select`) are similar to the Rails date and time 
@@ -8,13 +8,13 @@ module Formtastic
       #
       # The mark-up produced by Rails is simple but far from ideal, with no way to label the 
       # individual fragments for accessibility, no fieldset to group the related fields, and no
-      # legend describing the group. Formtastic addresses this within the standard `<li>` wrapper 
+      # legend describing the group. FormtasticRebootstrap addresses this within the standard `<li>` wrapper 
       # with a `<fieldset>` with a `<legend>` as a label, followed by an ordered list (`<ol>`) of 
       # list items (`<li>`), one for each fragment (year, month, ...). Each `<li>` fragment contains
       # a `<label>` (eg "Year") for the fragment, and a `<select>` containing `<option>`s (eg a 
       # range of years).
       #
-      # In the supplied formtastic.css file, the resulting mark-up is styled to appear a lot like a
+      # In the supplied FormtasticRebootstrap.css file, the resulting mark-up is styled to appear a lot like a
       # standard Rails date time select by:
       #
       # * styling the legend to look like the other labels (to the left hand side of the selects)

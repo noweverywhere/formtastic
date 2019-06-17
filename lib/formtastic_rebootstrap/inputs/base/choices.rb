@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     module Base
       module Choices
@@ -40,7 +40,7 @@ module Formtastic
         end
 
         def choice_html(choice)
-          raise "choice_html() needs to be implemented when including Formtastic::Inputs::Base::Choices"
+          raise "choice_html() needs to be implemented when including FormtasticRebootstrap::Inputs::Base::Choices"
         end
 
         def choice_label(choice)

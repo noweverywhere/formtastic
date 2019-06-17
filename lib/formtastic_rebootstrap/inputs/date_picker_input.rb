@@ -1,11 +1,11 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     
     # Outputs a simple `<label>` with a HTML5 `<input type="date">` wrapped in the standard
     # `<li>` wrapper. This is an alternative to `:date_select` for `:date`, `:time`, `:datetime` 
     # database columns. You can use this input with `:as => :date_picker`.
     #
-    # *Please note:* Formtastic only provides suitable markup for a date picker, but does not supply
+    # *Please note:* FormtasticRebootstrap only provides suitable markup for a date picker, but does not supply
     # any additional CSS or Javascript to render calendar-style date pickers. Browsers that support
     # this input type (such as Mobile Webkit and Opera on the desktop) will render a native widget.
     # Browsers that don't will default to a plain text field`<input type="text">` and can be 
@@ -66,7 +66,7 @@ module Formtastic
     #   <%= f.input :publish_at, :as => :date_picker, :placeholder => 20 %>
     #   <%= f.input :publish_at, :as => :date_picker, :input_html => { :placeholder => "YYYY-MM-DD" } %>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
     class DatePickerInput
       include Base
       include Base::Stringish

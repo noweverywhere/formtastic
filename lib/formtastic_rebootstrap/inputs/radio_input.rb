@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
 
     # A radio input is used to render a series of radio inputs. This is an alternative input choice
@@ -25,17 +25,17 @@ module Formtastic
     # * a `:time_zone` input (where you want to provide your own small set of choices instead of relying on Rails)
     # * a `:country` input (where you want to provide a small set of choices, no need for a plugin really)
     #
-    # For radio inputs that map to associations on the object model, Formtastic will automatically
+    # For radio inputs that map to associations on the object model, FormtasticRebootstrap will automatically
     # load in a collection of objects on the association as options to choose from. This might be an
     # `Author.all` on a `Post` form with an input for a `belongs_to :user` association, or a
     # `Section.all` for a `Post` form with an input for a `belongs_to :section` association.
     # You can override or customise this collection through the `:collection` option (see examples).
     #
-    # For radio inputs that map to ActiveRecord `enum` attributes, Formtastic will automatically
+    # For radio inputs that map to ActiveRecord `enum` attributes, FormtasticRebootstrap will automatically
     # load in your enum options to be used as the radio button choices. This can be overridden with
     # the `:collection` option, or augmented with I18n translations. See examples below.
     #
-    # The way on which Formtastic renders the `value` attribute and label for each choice in the `:collection` is
+    # The way on which FormtasticRebootstrap renders the `value` attribute and label for each choice in the `:collection` is
     # customisable (see examples below). When not provided, we fall back to a list of methods to try on each 
     # object such as `:to_label`, `:name` and `:to_s`, which are defined in the configurations
     # `collection_label_methods` and `collection_value_methods`.
@@ -120,8 +120,8 @@ module Formtastic
     #   # form
     #   <%= f.input :status, :as => :radio %>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
-    # @see Formtastic::Inputs::RadioInput as an alternative for `belongs_to` associations
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Inputs::RadioInput as an alternative for `belongs_to` associations
     #
     # @todo :disabled like CheckBoxes?
     class RadioInput

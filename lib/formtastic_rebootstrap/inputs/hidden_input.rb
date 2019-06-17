@@ -1,11 +1,11 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
 
     # Outputs a simple `<input type="hidden">` wrapped in the standard `<li>` wrapper. This is
     # provided for situations where a hidden field needs to be rendered in the flow of a form with
     # many inputs that form an `<ol>`. Wrapping the hidden input inside the `<li>` maintains the
     # HTML validity. The `<li>` is marked with a `class` of `hidden` so that stylesheet authors can
-    # hide these list items with CSS (formtastic.css does this out of the box).
+    # hide these list items with CSS (FormtasticRebootstrap.css does this out of the box).
     #
     # @example Full form context, output and CSS
     #
@@ -25,9 +25,9 @@ module Formtastic
     #     </fieldset>
     #   </form>
     #
-    #   form.formtastic li.hidden { display:none; }
+    #   form.FormtasticRebootstrap li.hidden { display:none; }
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
     class HiddenInput 
       include Base
       

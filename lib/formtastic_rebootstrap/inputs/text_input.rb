@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
 
     # Outputs a simple `<label>` with a `<textarea>` wrapped in the standard
@@ -24,25 +24,27 @@ module Formtastic
     #     </fieldset>
     #   </form>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
-    class TextInput 
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    class TextInput
       include Base
       include Base::Placeholder
-      
       def input_html_options
-        { 
+        {
           :cols => builder.default_text_area_width,
           :rows => builder.default_text_area_height
         }.merge(super)
       end
-      
+
+      def label_html
+        ''
+      end
+
       def to_html
         input_wrapping do
           label_html <<
           builder.text_area(method, input_html_options)
         end
       end
-    
     end
   end
 end

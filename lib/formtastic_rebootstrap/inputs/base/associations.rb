@@ -1,8 +1,8 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     module Base
       module Associations
-        include Formtastic::Helpers::Reflection
+        include FormtasticRebootstrap::Helpers::Reflection
 
         # :belongs_to, etc
         def association

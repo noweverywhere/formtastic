@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     # A select input is used to render a `<select>` tag with a series of options to choose from.
     # It works for both single selections (like a `belongs_to` relationship, or "yes/no" boolean),
@@ -26,20 +26,20 @@ module Formtastic
     # Within the standard `<li>` wrapper, the output is a `<label>` tag followed by a `<select>`
     # tag containing `<option>` tags.
     #
-    # For inputs that map to associations on the object model, Formtastic will automatically load
+    # For inputs that map to associations on the object model, FormtasticRebootstrap will automatically load
     # in a collection of objects on the association as options to choose from. This might be an
     # `Author.all` on a `Post` form with an input for a `belongs_to :user` association, or a
     # `Tag.all` for a `Post` form with an input for a `has_and_belongs_to_many :tags` association.
     # You can override or customise this collection and the `<option>` tags it will render through
     # the `:collection` option (see examples).
     #
-    # The way on which Formtastic renders the `value` attribute and content of each `<option>` tag
+    # The way on which FormtasticRebootstrap renders the `value` attribute and content of each `<option>` tag
     # is customisable through the `:member_label` and `:member_value` options. When not provided,
     # we fall back to a list of methods to try on each object such as `:to_label`, `:name` and
     # `:to_s`, which are defined in the configurations `collection_label_methods` and
     # `collection_value_methods` (see examples below).
     #
-    # For select inputs that map to ActiveRecord `enum` attributes, Formtastic will automatically
+    # For select inputs that map to ActiveRecord `enum` attributes, FormtasticRebootstrap will automatically
     # load in your enum options to be used as the select's options. This can be overridden with
     # the `:collection` option, or augmented with I18n translations. See examples below.
     # An error is raised if you try to render a multi-select with an enum, as ActiveRecord can
@@ -94,7 +94,7 @@ module Formtastic
     #       </fieldset>
     #     </form>
     #
-    # @example Override Formtastic's assumption on when you need a multi select
+    # @example Override FormtasticRebootstrap's assumption on when you need a multi select
     #   <%= f.input :authors, :as => :select, :input_html => { :multiple => true } %>
     #   <%= f.input :authors, :as => :select, :input_html => { :multiple => false } %>
     #
@@ -148,9 +148,9 @@ module Formtastic
     #   # form
     #   <%= f.input :status, :as => :select %>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
-    # @see Formtastic::Inputs::CheckBoxesInput CheckBoxesInput as an alternative for `has_many` and `has_and_belongs_to_many` associations
-    # @see Formtastic::Inputs::RadioInput RadioInput as an alternative for `belongs_to` associations
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Inputs::CheckBoxesInput CheckBoxesInput as an alternative for `has_many` and `has_and_belongs_to_many` associations
+    # @see FormtasticRebootstrap::Inputs::RadioInput RadioInput as an alternative for `belongs_to` associations
     #
     # @todo Do/can we support the per-item HTML options like RadioInput?
     class SelectInput
@@ -159,7 +159,7 @@ module Formtastic
 
       def initialize(*args)
         super
-        raise Formtastic::UnsupportedEnumCollection if collection_from_enum? && multiple?
+        raise FormtasticRebootstrap::UnsupportedEnumCollection if collection_from_enum? && multiple?
       end
 
       def to_html

@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
 
     # A CheckBoxes input is used to render a series of checkboxes. This is an alternative input choice
@@ -60,8 +60,8 @@ module Formtastic
     # @example `:value_as_class` can be used to add a class to the `<li>` wrapped around each choice using the checkbox value for custom styling of each choice
     #   <%= f.input :categories, :as => :check_boxes, :value_as_class => true %>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
-    # @see Formtastic::Inputs::BooleanInput BooleanInput for a single checkbox for boolean (checked = true) inputs
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Inputs::BooleanInput BooleanInput for a single checkbox for boolean (checked = true) inputs
     #
     # @todo Do/can we support the per-item HTML options like RadioInput?
     class CheckBoxesInput
@@ -71,7 +71,7 @@ module Formtastic
 
       def initialize(*args)
         super
-        raise Formtastic::UnsupportedEnumCollection if collection_from_enum?
+        raise FormtasticRebootstrap::UnsupportedEnumCollection if collection_from_enum?
       end
 
       def to_html

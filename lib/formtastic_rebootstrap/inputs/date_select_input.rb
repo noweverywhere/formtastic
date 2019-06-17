@@ -1,8 +1,8 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     # Outputs a series of select boxes for the fragments that make up a date (year, month, day).
     #
-    # @see Formtastic::Inputs::Base::Timeish Timeish module for documentation of date, time and datetime input options.
+    # @see FormtasticRebootstrap::Inputs::Base::Timeish Timeish module for documentation of date, time and datetime input options.
     class DateSelectInput 
       include Base
       include Base::Timeish

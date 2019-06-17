@@ -1,11 +1,11 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     # Outputs a series of select boxes for the fragments that make up a time (hour, minute, second).
     # Unless `:ignore_date` is true, it will render hidden inputs for the year, month and day as 
     # well, defaulting to `Time.current` if the form object doesn't have a value, much like Rails' 
     # own `time_select`.
     #
-    # @see Formtastic::Inputs::Base::Timeish Timeish module for documentation of date, time and datetime input options.
+    # @see FormtasticRebootstrap::Inputs::Base::Timeish Timeish module for documentation of date, time and datetime input options.
     class TimeSelectInput 
       include Base
       include Base::Timeish

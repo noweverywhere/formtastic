@@ -1,4 +1,4 @@
-module Formtastic
+module FormtasticRebootstrap
   module Inputs
     # Outputs a country select input, wrapping around a regular country_select helper.
     # Rails doesn't come with a `country_select` helper by default any more, so you'll need to do
@@ -8,12 +8,12 @@ module Formtastic
     # * install any other country_select plugin that behaves in a similar way
     # * roll your own `country_select` helper with the same args and options as the Rails one
     #
-    # Formtastic supports both 1.x and 2.x of stefanpenner/country_select, but if you're upgrading
+    # FormtasticRebootstrap supports both 1.x and 2.x of stefanpenner/country_select, but if you're upgrading
     # from 1.x, they behave quite differently, so please see their [upgrade instructions](https://github.com/stefanpenner/country_select/blob/master/UPGRADING.md).
     #
-    # By default, Formtastic includes a handful of English-speaking countries as "priority
+    # By default, FormtasticRebootstrap includes a handful of English-speaking countries as "priority
     # countries", which can be set in the `priority_countries` configuration array in the
-    # formtastic.rb initializer to suit your market and user base (see README for more info on
+    # FormtasticRebootstrap.rb initializer to suit your market and user base (see README for more info on
     # configuration). Additionally, it is possible to set the :priority_countries on a per-input
     # basis through the `:priority_countries` option. These priority countries will be passed down
     # to the `country_select` helper of your choice, and may or may not be used by the helper.
@@ -63,7 +63,7 @@ module Formtastic
     #       # ...
     #   </li>
     #
-    # @see Formtastic::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
+    # @see FormtasticRebootstrap::Helpers::InputsHelper#input InputsHelper#input for full documentation of all possible options.
     class CountryInput 
       include Base
 

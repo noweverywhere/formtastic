@@ -1,6 +1,8 @@
+require 'formtastic'
+
+raise 'this is loaded'
 module FormtasticRebootstrap
-  class FormBuilder < ActionView::Helpers::FormBuilder
-  # class FormBuilder < Formtastic::Formbuilder
+  class FormBuilder < Formtastic::FormBuilder
 
     # Defines a new configurable option
     # @param [Symbol] name the configuration name

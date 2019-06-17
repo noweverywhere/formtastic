@@ -10,7 +10,7 @@ module FormtasticRebootstrap
     end
 
     def minimum_version_of_rails
-      "4.1.0"
+      "4.2.0"
     end
 
     def rails_version
